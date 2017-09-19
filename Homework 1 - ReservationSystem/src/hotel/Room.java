@@ -1,10 +1,13 @@
 package hotel;
 
+import components.Wifi;
+
 abstract public class Room {
 
 	private float priceForADay;
 	private int daysReserved;
 	private boolean isReserved;
+	protected Wifi mWifi;
 
 
 

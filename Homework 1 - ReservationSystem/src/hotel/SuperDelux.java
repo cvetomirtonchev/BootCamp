@@ -1,14 +1,19 @@
 package hotel;
 
+import components.Router;
 import components.Wifi;
 
-public class SuperDelux extends Room {
-
-	Wifi wifi;
+public class SuperDelux extends Room implements Router {
 
 	public SuperDelux(float priceForADay) {
 		super(priceForADay);
-		wifi = new Wifi("asdasd", "adasdasd");
+
+	}
+
+	@Override
+	public void wifiConfig() {
+		mWifi = new Wifi("Hotel1", "12357687");
+
 	}
 
 }

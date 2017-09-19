@@ -1,15 +1,19 @@
 package hotel;
 
+import components.Router;
 import components.Wifi;
 
-public class Delux extends SpecialRoom{
+public class Delux extends SpecialRoom implements Router {
 
-	Wifi mWifi;
+
 
 	public Delux(float priceForADay, Occupancy occupancy) {
 		super(priceForADay, occupancy);
-		this.mWifi = new Wifi("Hotel1","12357687") ;
 	}
-	
-	
+
+	@Override
+	public void wifiConfig() {
+		mWifi = new Wifi("Hotel1", "12357687");
+	}
+
 }

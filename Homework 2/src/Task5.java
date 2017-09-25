@@ -1,21 +1,19 @@
-import java.util.ArrayList;
 
 public class Task5 {
 	public static void main(String[] args) {
-		int[] input = new int[]{1, 1, 3, 7, 7, 8, 9, 9, 9, 10};
-		int current = input[0];
-		boolean found = false;
+		int[] arr1 = new int[]{1, 1, 3, 7, 7, 8, 9, 9, 9, 10};
+		int current = arr1[0];
+		boolean isDouble = false;
 
-		for (int i = 0; i < input.length; i++) {
-		    if (current == input[i] && !found) {
-		        found = true;
-		    } else if (current != input[i]) {
+		for (int i = 0; i < arr1.length; i++) {
+		    if (current == arr1[i] && !isDouble) {
+		        isDouble = true;
+		    } else if (current != arr1[i]) {
 		        System.out.print(" " + current);
-		        current = input[i];
-		        found = false;
+		        current = arr1[i];
+		        isDouble = false;
 		    }
 		}
 		System.out.print(" " + current);
 	}
-
 }
